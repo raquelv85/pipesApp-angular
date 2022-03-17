@@ -51,26 +51,38 @@
         <li>date | date: 'MMMM'</li>
         <li>date | date: 'MMMM dd, yyyy'</li>
       </ul>
+      <hr />
+      <ul>
+        <li>date | date: 'long':'GMT-6'</li>
+        <li>date | date: 'long':'GMT-4'</li>
+        <li>date | date: 'long':'':'fr'</li>
+      </ul>
     </p-card>
   </div>
   <div class="col-6">
     <p-card>
       <ul>
-        <li>{{date}}</li>
-        <li>{{date | date}}</li>
-        <li>{{date | date: 'short'}}</li>
-        <li>{{date | date: 'long'}}</li>
-        <li>{{date | date: 'full'}}</li>
-        <li>{{date | date: 'shortDate'}}</li>
-        <li>{{date | date: 'mediumDate'}}</li>
-        <li>{{date | date: 'longDate'}}</li>
-        <li>{{date | date: 'fullDate'}}</li>
-        <li>{{date | date: 'shortTime'}}</li>
-        <li>{{date | date: 'mediumTime'}}</li>
-        <li>{{date | date: 'longTime'}}</li>
-        <li>{{date | date: 'fullTime'}}</li>
-        <li>{{date | date: 'MMMM'}}</li>
-        <li>{{date | date: 'MMMM dd, yyyy'}}</li>
+        <li>{{ date }}</li>
+        <li>{{ date | date }}</li>
+        <li>{{ date | date: "short" }}</li>
+        <li>{{ date | date: "long" }}</li>
+        <li>{{ date | date: "full" }}</li>
+        <li>{{ date | date: "shortDate" }}</li>
+        <li>{{ date | date: "mediumDate" }}</li>
+        <li>{{ date | date: "longDate" }}</li>
+        <li>{{ date | date: "fullDate" }}</li>
+        <li>{{ date | date: "shortTime" }}</li>
+        <li>{{ date | date: "mediumTime" }}</li>
+        <li>{{ date | date: "longTime" }}</li>
+        <li>{{ date | date: "fullTime" }}</li>
+        <li>{{ date | date: "MMMM" }}</li>
+        <li>{{ date | date: "MMMM dd, yyyy" }}</li>
+      </ul>
+      <hr />
+      <ul>
+        <li>{{ date | date: "long":"GMT-6" }}</li>
+        <li>{{ date | date: "long":"GMT-4" }}</li>
+        <li>{{ date | date: "long":"":"fr" }}</li>
       </ul>
     </p-card>
   </div>
