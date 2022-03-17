@@ -11,4 +11,6 @@ export class BasicsComponent {
   nameUpper: string = 'RAQUEL';
   fullName: string = 'rAquEl ViLlaVerDe';
 
+  date: Date = new Date();
+
 }
