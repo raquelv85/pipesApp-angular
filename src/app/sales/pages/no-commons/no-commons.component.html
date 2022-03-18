@@ -2,7 +2,7 @@
   <h1>Pipes no tan comunes</h1>
   <p>
     Pipes incluidos en Angular - Usualmente en el Common Module para controlar
-    el género de las personas, y el singular y el plural
+    el género de las personas, el singular y el plural, cortar arrays
   </p>
 </div>
 
@@ -37,6 +37,31 @@
             label="Borrar cliente"
             class="p-button-help"
           ></button>
+        </li>
+      </ul>
+    </p-fieldset>
+  </div>
+  <div class="col">
+    <p-fieldset legend="slice Pipe" [toggleable]="true">
+      <ul>
+        <li>
+          <b>Original</b>
+          <pre>{{ clients }}</pre>
+
+          <b>slice: 0:2</b>
+          <pre>{{ clients | slice:0:2}}</pre>
+
+          <b>slice: 1:2</b>
+          <pre>{{ clients | slice:1:2}}</pre>
+        </li>
+      </ul>
+    </p-fieldset>
+  </div>
+  <div class="col">
+    <p-fieldset legend="keyValue Pipe" [toggleable]="true">
+      <ul>
+        <li *ngFor="let item of person | keyvalue">
+          {{ item.key }}: {{item.value}}
         </li>
       </ul>
     </p-fieldset>

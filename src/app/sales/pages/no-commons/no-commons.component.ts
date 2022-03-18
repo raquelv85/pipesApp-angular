@@ -18,7 +18,7 @@ export class NoCommonsComponent {
 
   //i18nPlural
 
-  clients: string[] = ['','','',''];
+  clients: string[] = ['cliente1','cliente2','cliente3','cliente4'];
   clientsMap = {
     '=0': 'no tenemos ningún cliente esperando.',
     '=1': 'tenemos un cliente esperando.',
@@ -34,4 +34,11 @@ export class NoCommonsComponent {
   deleteClient(){
     this.clients.pop();
   };
+
+  //keyValue Pipe
+  person = {
+    name: 'Raquel',
+    age: 35,
+    address: 'Madrid'
+  }
 }
