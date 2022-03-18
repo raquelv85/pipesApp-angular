@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-no-commons',
@@ -40,5 +41,32 @@ export class NoCommonsComponent {
     name: 'Raquel',
     age: 35,
     address: 'Madrid'
-  }
+  };
+
+  //jsonPipe
+  heros = [
+    {
+      name: 'Superman',
+      flying: true
+    },
+    {
+      name: 'Robin',
+      flying: false
+    },
+    {
+      name: 'Aquaman',
+      flying: false
+    }
+  ];
+
+  //Async pipe
+  myObservable = interval(1000);
+
+  promiseValue = new Promise((resolve, reject) => {
+
+    setTimeout(() => {
+      resolve('fin de la promesa')
+    }, 3500);
+
+  })
 }

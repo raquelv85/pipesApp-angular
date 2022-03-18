@@ -2,7 +2,7 @@
   <h1>Pipes no tan comunes</h1>
   <p>
     Pipes incluidos en Angular - Usualmente en el Common Module para controlar
-    el género de las personas, el singular y el plural, cortar arrays
+    el género de las personas, el singular y el plural, cortar arrays, imprimir objetos y arrays, y manejar asincronía
   </p>
 </div>
 
@@ -49,10 +49,10 @@
           <pre>{{ clients }}</pre>
 
           <b>slice: 0:2</b>
-          <pre>{{ clients | slice:0:2}}</pre>
+          <pre>{{ clients | slice: 0:2 }}</pre>
 
           <b>slice: 1:2</b>
-          <pre>{{ clients | slice:1:2}}</pre>
+          <pre>{{ clients | slice: 1:2 }}</pre>
         </li>
       </ul>
     </p-fieldset>
@@ -61,7 +61,29 @@
     <p-fieldset legend="keyValue Pipe" [toggleable]="true">
       <ul>
         <li *ngFor="let item of person | keyvalue">
-          {{ item.key }}: {{item.value}}
+          {{ item.key }}: {{ item.value }}
+        </li>
+      </ul>
+    </p-fieldset>
+  </div>
+  <div class="col">
+    <p-fieldset legend="json Pipe" [toggleable]="true">
+      <ul>
+        <li>
+          <pre>{{ heros | json }}</pre>
+        </li>
+      </ul>
+    </p-fieldset>
+  </div>
+  <div class="col">
+    <p-fieldset legend="Async Pipe" [toggleable]="true">
+      <ul>
+        <li>
+          <pre>{{ myObservable | async }}</pre>
+        </li>
+        <li>
+          <pre *ngIf="!(promiseValue | async)">Resolviendo promesa</pre>
+          <pre>{{ promiseValue | async}}</pre>
         </li>
       </ul>
     </p-fieldset>

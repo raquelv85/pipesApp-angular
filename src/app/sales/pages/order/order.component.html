@@ -1,1 +1,16 @@
-<p>order works!</p>
+<div class="text-layout">
+  <h1>Pipes personalizados</h1>
+  <p>Pipes creados por nosotros</p>
+
+  <div class="p-grid">
+    <div class="col">
+      <p-card header="uppercase">
+        <p>
+          Custom pipe para pasar a mayúsculas:
+          {{ "hola mundo" | customUppercasePipe: isUpper }}
+        </p>
+        <button pButton label="toggle mayúsculas" (click)="toggleUpper()"></button>
+      </p-card>
+    </div>
+  </div>
+</div>
