@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Color, Hero } from '../../interfaces/sales.interfaces';
 
 @Component({
   selector: 'app-order',
@@ -9,6 +10,33 @@ import { Component } from '@angular/core';
 export class OrderComponent {
 
   isUpper: boolean = true;
+  heros: Hero[] = [
+    {
+      name:'Superman',
+      flying: true,
+      color: Color.blue
+    },
+    {
+      name:'Batman',
+      flying: false,
+      color: Color.black
+    },
+    {
+      name:'Robin',
+      flying: false,
+      color: Color.green
+    },
+    {
+      name:'Daredevil',
+      flying: false,
+      color: Color.red
+    },
+    {
+      name:'Linterna verde',
+      flying: true,
+      color: Color.green
+    }
+  ];
 
   toggleUpper(){
     this.isUpper = !this.isUpper;
