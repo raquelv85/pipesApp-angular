@@ -38,8 +38,14 @@ export class OrderComponent {
     }
   ];
 
+  orderBy: string = '';
+
   toggleUpper(){
     this.isUpper = !this.isUpper;
+  }
+
+  changeOrder( value: string){
+    this.orderBy = value;
   }
 
 }

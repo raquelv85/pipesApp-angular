@@ -8,6 +8,7 @@ import { BasicsComponent } from './pages/basics/basics.component';
 import { OrderComponent } from './pages/order/order.component';
 import { UppercasePipe } from './pipes/uppercases.pipe';
 import { flyingPipe } from './pipes/flying.pipe';
+import { OrderPipe } from './pipes/order.pipe';
 
 
 
@@ -19,7 +20,8 @@ import { flyingPipe } from './pipes/flying.pipe';
     BasicsComponent,
     OrderComponent,
     UppercasePipe,
-    flyingPipe
+    flyingPipe,
+    OrderPipe
   ],
   exports: [
     NumbersComponent,
